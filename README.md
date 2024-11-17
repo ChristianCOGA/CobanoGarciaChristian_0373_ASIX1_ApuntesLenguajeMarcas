@@ -186,7 +186,7 @@ Desgranando que significa cada nomenclatura sería de la siguiente manera:
 
 ##
 
-## - Etiquetas de HTML 
+### - Etiquetas de HTML 
 Los "tags" HTML, o "etiquetas" HTML, son códigos utilizados para "marcar" el texto de una página web, con el fin de dar instrucciones al navegador sobre cómo mostrarlo.
 
 Tenemos varias posibilidades destacando los más usados:
@@ -207,14 +207,14 @@ Estas etiquetas pueden dividirse en **Elementos de bloque** : Necesidad de una l
 
 ##
 
-## - Rutas
+### - Rutas
 Para poder movernos y saber donde buscar el nuestros archivos multimedia o enlaces tendremos dos opciones : 
 - **Ruta Absoluta** : Para certicificar la ruta a seguir al pie de la letra del archivo a buscar. Útil para trabajo entre servidores o diferentes ubicaciones con menos propenciones a errores de ruta.
 - **Ruta Relativa** : Conexión o ruta que se hace en relación con el archivo actual. Práctico para trabajo local en un mismo dispositivo o proyectos pequeños.
 
-## 
+##
 
-## - Imagenes
+### - Imagenes
 Para insertar imagenes deberemos usar uno de los comandos antes mostrados ``<img> + src`` el cual específica que cargaremos una imagen y con ``src`` de donde procede.
 - ``<img src="Emperador.jpg" width="250" height="350">``
 
@@ -224,7 +224,7 @@ Como podemos observar además de indicar la fuente de la imagen, podemos modific
 
 ##
 
-## - Enlaces
+### - Enlaces
 De igual manera que hemos visto con la imagen, haremos uso de otros comandos para poder enlazar nuestro documento, bien con otra sección del mismo o con una página web externa, tal y como veremos en el siguiente ejemplo:
 
 - ``<a href="https://www.warhammer.com/es-ES/home"> Visita la página del Emperador </a>``
@@ -233,7 +233,7 @@ De igual manera que hemos visto con la imagen, haremos uso de otros comandos par
 
 ##
 
-## - Validador de HTML 
+### - Validador de HTML 
 
 Página web que nos verifica y indica los errores que hemos podidio cometer a la hora de escriir la sintaxis o las nomenlcaturas de nuestro documento **HTML**.
 
@@ -243,4 +243,112 @@ Enlace : <a href="https://validator.w3.org/">Validador HTML</a>
 
 ##
 
-## - 
+### - Elementos semánticos HTML5
+
+Es crucial saber usar contenedores de información que indiquen que tipo de elemento estructural contienen, como por ejemplo:
+- ``<footer>`` : Pie de página.
+- ``<header>`` : Encabezado.
+- ``<article>`` : Donde va el contenido del artículo.
+- ``<section>`` : Sección de información de la página.
+- ``<nav>`` : Proporcionar enlaces de navegación.
+- ``<figure>`` : Representa contenido independiente, a menudo con un título.
+
+##
+
+### - Formularios y sus etiquetas
+Los formularios nos sirven para interactuar con el usuario y que esta pueda transmitirnos información.
+
+- ``<form></fomr>`` : Se uutiliza para la creación de formularios de interacción con el usuario, todo aquello dentro de esta sección será parte del mismo.
+- ``<input></input>`` : Utilizado para crear diversos tipos de campos interactivos con el formulario. Siendo estos campos de diferentes tipos de atributos:
+  - ``type`` : Define el tipo de entrada que se debe mostrar.
+  - ``id`` : Identificador único para el campo, puede asociarse con un elemento que veremos más adelante; ``<label>``.
+  - ``name`` : Nombre del campo de entrada.
+  - ``value`` : Valor predeterminado del campo de entrada.
+  - ``placeholder`` : Texto que aparece el campo cuando está vacío, ofrce pista de que dato debe introducir el usuario.
+  - ``disabled`` : Para desactivar un campo evitando interacción del usuario.
+- ``<label>`` : Se usa para proporcionar una etiqueta o descripción para un elemento de formulario.
+- - ``<fieldset></fieldset>`` : Nos permie agrupar las ocpiones del formulario de manera ordenada en un recuadro con un nombre de encabezado para el.
+
+Un ejemplo de como emplear las etiquetas mostradas: 
+```
+    <form action = "recepcion.png" method = "GET"> 
+        <label for = "nombre">Nombre :</label>
+        <input type = "text" id ="nombre" name ="nombre" placeholder ="Introduce tu nombre"><br><br>
+        <label for = "password" >Contraseña :</label>
+        <input type = "password" id ="password" name ="password" placeholder ="Introduce tu contraseña"><br><br>
+    </form>
+```
+Dando como resultado el formulario pidiendo **Nombre** y **Contraseña** al usuario.
+<form action = "recepcion.png" method = "GET"> 
+        <label for = "nombre">Nombre :</label>
+        <input type = "text" id ="nombre" name ="nombre" placeholder ="Introduce tu nombre"><br><br>
+        <label for = "password" >Contraseña :</label>
+        <input type = "password" id ="password" name ="password" placeholder ="Introduce tu contraseña"><br><br>
+</form>
+
+Así podriamos pedir que nos aporte el usuario la información de la manera en que categorizemos el atributo ``type`` como en el siguiente ejemplo, donde pediremos una selección de opciones y no rellenar datos:
+```
+    <form
+        <fieldset>
+            <legend>Idioma</legend>
+            <input type = "radio" id="idioma" name = "idioma" value = "castellano">
+            <label for = "castellano">Castellano</label>
+
+            <input type = "radio" id="idioma" name = "idioma" value = "catalan">
+            <label for = "catalan">Catalán</label>
+
+            <input type = "radio" id="idioma" name = "idioma" value = "chino">
+            <label for = "chino">Chino</label> 
+        </fieldset>
+    </form>    
+```
+<form
+        <fieldset>
+            <legend>Idioma</legend>
+            <input type = "radio" id="idioma" name = "idioma" value = "castellano">
+            <label for = "castellano">Castellano</label>
+            <input type = "radio" id="idioma" name = "idioma" value = "catalan">
+            <label for = "catalan">Catalán</label>
+            <input type = "radio" id="idioma" name = "idioma" value = "chino">
+            <label for = "chino">Chino</label> 
+        </fieldset>
+</form>
+
+<br>
+
+Ahora mostraremos ``<select></select>`` cuya función consiste en desplegar una pestaña de opciones a elegir para el usuario en el formulario que le proporcionamos, de la siguiente manera:
+```
+<form>
+    <label for="ciudad">Ciudad</label>
+        <select id="ciudad" name="ciudad">
+            <option value=""disabled>Seleccione una ciudad</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Valencia ">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Murcia">Murcia</option>
+        </select>
+</form>   
+```
+
+Estas línes de código nos permiten hacer uso del siguiente desplegable, dando varias opciones de elección gracias a la etiqueta ``<select>`` con sus diferentes opciones usando la etiqueta ``option`` más el atributo ``value``.
+<form>
+    <label for="ciudad">Ciudad</label>
+        <select id="ciudad" name="ciudad">
+            <option value=""disabled>Seleccione una ciudad</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Valencia ">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Murcia">Murcia</option>
+        </select>
+</form> 
+
+<br>
+
+Para terminar esta sección de formularios, hablaremos de la etiqueta ``<button>`` que se usa para crear botones interactivos para el usuario en el formulario o una página web. Por ejemplo:
+```
+    <button type="submit"> Enviar datos</button>
+```
+Dando la línea de código mostrada el siguiente resultado de interacción.
+<button type="submit"> Enviar datos</button>
