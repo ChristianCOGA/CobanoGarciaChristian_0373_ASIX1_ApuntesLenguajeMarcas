@@ -32,19 +32,22 @@ Es un lugar o archivo donde puedes almacenar el código, los archivos y el histo
 Ahora si crearemos nuestro repositorio en *GitHub* y nos aseguraremos de copiar la **URL** para poder clonarlo en nuestro sistema.
 - En la pestaña **New** crearemos el repositorio.
 
-![Foto03](Apuntes004.jpg)
+![Foto03](./Imagenes/Apuntes004.jpg)
 - Nombraremos el repositorio y lo pondremos en público o privado según preferencia.
 
-![Foto01](Apuntes001.jpg)
+![Foto01](./Imagenes/Apuntes001.jpg)
 - Copiaremos el link del repositorio para añadirlo a nuestro dispositivo local.
 
-![Foto02](Apuntes002.jpg)
+![Foto02](./Imagenes/Apuntes002.jpg)
 
 - Ahora tendremos que clonarlo en nuestro dispositivo local con el comando:  
 
-![Foto03](Apuntes003.jpg)
+![Foto03](./Imagenes/Apuntes003.jpg)
 
 Con esto ya podriamos trabajar en local e ir subiendo **commits** según avancemos en nuetsro proyecto para no perder el avance.
+
+<!--Hasta aquí GUTHUB-->
+
 ## [MARKDOWN](#indice)
 Es un lenguaje de marcado ligero creado por **John Gruber** y **Aaron Swartz** que trata de conseguir la máxima legibilidad y facilidad con la aplicación de formato a un texto empleando una serrie de caracteres de una forma especial.
 
@@ -130,7 +133,7 @@ Para seleccionar y enseñar una imagen es tan sencillo como descargarla y ubicar
     ![Nombre X](nombre de la imagen o ubicación + "Título opcional de la imagen)
 ```
 
-![Emperador](Emperador.jpg "Warhammer mola")
+![Emperador](./Imagenes/Emperador.jpg "Warhammer mola")
 
 ##
 
@@ -152,6 +155,9 @@ Para seleccionar y enseñar una imagen es tan sencillo como descargarla y ubicar
     |:---------|:----:|---------:|
     |Templarios Negros|500|Terra|
     |Ultramarines|1500|Ultramar|
+
+<!--Hasta aquí MARKDOWN-->
+
 ## [HTML](#indice)
 ### - ¿Qué es HTML?
 **HTML** o **HyerText Markup Lenguage** es el lenguaje de marcas mas importante de internet, siendo este la base de poder visualizar contenido en un navegador web.
@@ -216,9 +222,9 @@ Para poder movernos y saber donde buscar el nuestros archivos multimedia o enlac
 
 ### - Imagenes
 Para insertar imagenes deberemos usar uno de los comandos antes mostrados ``<img> + src`` el cual específica que cargaremos una imagen y con ``src`` de donde procede.
-- ``<img src="Emperador.jpg" width="250" height="350">``
+- ``<img src="./Imagenes/Emperador.jpg" width="250" height="350">``
 
-<img src="Emperador.jpg" width="250" height="350">
+<img src="./Imagenes/Emperador.jpg" width="250" height="350">
 
 Como podemos observar además de indicar la fuente de la imagen, podemos modificar párametros de tamaño con las etiquetas ``width`` y ``height``.
 
@@ -279,14 +285,10 @@ Un ejemplo de como emplear las etiquetas mostradas:
     </form>
 ```
 Dando como resultado el formulario pidiendo **Nombre** y **Contraseña** al usuario.
-<form action = "recepcion.png" method = "GET"> 
-        <label for = "nombre">Nombre :</label>
-        <input type = "text" id ="nombre" name ="nombre" placeholder ="Introduce tu nombre"><br><br>
-        <label for = "password" >Contraseña :</label>
-        <input type = "password" id ="password" name ="password" placeholder ="Introduce tu contraseña"><br><br>
-</form>
 
-Así podriamos pedir que nos aporte el usuario la información de la manera en que categorizemos el atributo ``type`` como en el siguiente ejemplo, donde pediremos una selección de opciones y no rellenar datos:
+![Foto05](./Imagenes/Apuntes005.jpg)
+
+De la siguiente manera podriamos pedir que nos aporte el usuario la información de la manera en que categorizemos el atributo ``type`` como en el siguiente ejemplo, donde pediremos una selección de opciones y no rellenar datos:
 ```
     <form
         <fieldset>
@@ -302,19 +304,7 @@ Así podriamos pedir que nos aporte el usuario la información de la manera en q
         </fieldset>
     </form>    
 ```
-<form
-        <fieldset>
-            <legend>Idioma</legend>
-            <input type = "radio" id="idioma" name = "idioma" value = "castellano">
-            <label for = "castellano">Castellano</label>
-            <input type = "radio" id="idioma" name = "idioma" value = "catalan">
-            <label for = "catalan">Catalán</label>
-            <input type = "radio" id="idioma" name = "idioma" value = "chino">
-            <label for = "chino">Chino</label> 
-        </fieldset>
-</form>
-
-<br>
+![Foto06](./Imagenes/Apuntes006.jpg)
 
 Ahora mostraremos ``<select></select>`` cuya función consiste en desplegar una pestaña de opciones a elegir para el usuario en el formulario que le proporcionamos, de la siguiente manera:
 ```
@@ -331,24 +321,13 @@ Ahora mostraremos ``<select></select>`` cuya función consiste en desplegar una 
 </form>   
 ```
 
-Estas línes de código nos permiten hacer uso del siguiente desplegable, dando varias opciones de elección gracias a la etiqueta ``<select>`` con sus diferentes opciones usando la etiqueta ``option`` más el atributo ``value``.
-<form>
-    <label for="ciudad">Ciudad</label>
-        <select id="ciudad" name="ciudad">
-            <option value=""disabled>Seleccione una ciudad</option>
-            <option value="Barcelona">Barcelona</option>
-            <option value="Madrid">Madrid</option>
-            <option value="Valencia ">Valencia</option>
-            <option value="Sevilla">Sevilla</option>
-            <option value="Murcia">Murcia</option>
-        </select>
-</form> 
+Estas línes de código nos permiten hacer uso del siguiente desplegable, dando varias opciones de elección gracias a la etiqueta ``<select>`` con sus diferentes opciones usando la etiqueta ``option`` más el atributo 
 
-<br>
+![Foto07](./Imagenes/Apuntes007.jpg)
 
 Para terminar esta sección de formularios, hablaremos de la etiqueta ``<button>`` que se usa para crear botones interactivos para el usuario en el formulario o una página web. Por ejemplo:
 ```
     <button type="submit"> Enviar datos</button>
 ```
 Dando la línea de código mostrada el siguiente resultado de interacción.
-<button type="submit"> Enviar datos</button>
+![Foto08](./Imagenes/Apuntes008.jpg)
