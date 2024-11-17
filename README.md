@@ -1,5 +1,4 @@
-# CobanoGarciaChristian_0373_ASIX1_ApuntesLenguajeMarcas
-# LENGUAJES DE MARCAS - ASIX 0373
+# LENGUAJE DE MARCAS - ASIX 0373
 ## INDICE
 - [GITHUB](#github)
 - [MARKDOWN](#markdown)
@@ -11,8 +10,13 @@
 - Tenemos la posibilidad de alternar en que sean públicos o privados nuestros repertorios.
   - Como puntualización, decir que aunque estén en público nuestros repertorios, siendo estos tomados por su **URL** podrán como mucho copiarlos y modificarlos por su cuenta pero nunca modificar nuestro repertorio.
 
+##
+
 ### - Crear cuenta en GITHUB
 -En la página de *GitHub* nos registraremos para permitirnos crear repositorios o colaborar en proyectos ajenos.
+
+##
+
 ### - Repertorios
 #### ¿Qué es un repertorio?
 Es un lugar o archivo donde puedes almacenar el código, los archivos y el historial de revisiones de cada archivo. Los repositorios pueden contar con múltiples colaboradores y pueden ser públicos como privados.
@@ -56,7 +60,9 @@ Empleando la siguiente nomenclatura:
     # Título 1
     ## Título 2
     ### Título 3 
-```    
+``` 
+##
+
 ### - **Negrita** y *Cursiva*
 Como se ve en el encabezado, la nomenclatura a seguir será la siguiente:
 ```
@@ -70,6 +76,8 @@ Añadir que si queremos que sea ambas a la vez, deberemos usar 3 caracteres a ca
 ```
     Negrita y cursiva : ***Palabra*** // ___Palabra___
 ```
+##
+
 ### - Listas
 Comprende el formato en que se harían las listas en cualquier procesador de texto, ya sea con guión o con numerales:
 1. Primero
@@ -78,6 +86,9 @@ Comprende el formato en que se harían las listas en cualquier procesador de tex
 - Título 1
 - Título 2
 - Título 3
+
+##
+
 ### - Mostar código
 La nomenclatura que usaremos pra mostrar el código es mediante el uso de ``` `` ``` y dentro del espacio generado, insertaremos el código que querramos, por ejemplo:
 ```
@@ -96,6 +107,9 @@ La nomenclatura que usaremos pra mostrar el código es mediante el uso de ``` ``
         </html>
     ```
 ```
+
+##
+
 ### - Enlaces
 Enlazar una página web en nuestro repositorio se hace de la siguiente manera, copiamos la dirección web y insertaremos la siguiente línea:
 
@@ -107,6 +121,8 @@ Como ejemplo el link de abajo a la página padre de todos los hobbys.
 
 [Warhammer](https://www.warhammer.com/es-ES/home)
 
+##
+
 ### - Imagenes
 Para seleccionar y enseñar una imagen es tan sencillo como descargarla y ubicarla en la carpeta del repositorio donde trabajamos de manera local y inscribir una nomenclatura similar a la de enlace con la siguiente línea:
 
@@ -115,6 +131,8 @@ Para seleccionar y enseñar una imagen es tan sencillo como descargarla y ubicar
 ```
 
 ![Emperador](Emperador.jpg "Warhammer mola")
+
+##
 
 ### - Tablas
  Para la creación de tablas debemos seguir una nomeclatura y orden específico.
@@ -141,4 +159,88 @@ Para seleccionar y enseñar una imagen es tan sencillo como descargarla y ubicar
 Creado por **Tim Berners-Lee**, **HTML** define la estructura y el contenido de los diferentes archivos multimedia mediante **etiquetas**.
 Destacando también por la facilidad que ofrece este lenguaje para ser usado y aprendido, de ahí que se haya estandarizado su uso en un procentaje muy elevado de páginas web.
 
+##
+
 ### - Estructura del código de HTML
+Los documentos **HTML** tienen una estructura inicial común, es decir, todo el contenido va dentro de dicha arquitectura de código.
+```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <tittle>Document</tittle>
+    </head>
+    <body>
+
+    </body>
+    </html>    
+```
+Desgranando que significa cada nomenclatura sería de la siguiente manera:
+- ``<!DOCTYPE html>`` : Define el formato de documento en este caso **HTML5**
+- ``<html></html>`` : Contiene el contenido principal del documento **HTML**.
+- ``<head></head>`` : Provee información general **(metadatos)** acerca del documento, incluyendo su título, enlaces a scripts y hojas de estilos.
+  - ``<meta></meta>`` :  **Metainformación**, sirve para aportar información sobre el documento..
+  - ``<tittle></tittle>`` : Define el título que tendra la página web en la pestaña de navegación.
+- ``<body></body>`` : Contiene el cuerpo de nuestro documento con todos los archivos que incluyamos en el, visible en la página web.
+
+##
+
+## - Etiquetas de HTML 
+Los "tags" HTML, o "etiquetas" HTML, son códigos utilizados para "marcar" el texto de una página web, con el fin de dar instrucciones al navegador sobre cómo mostrarlo.
+
+Tenemos varias posibilidades destacando los más usados:
+- ``<h1> ... <h6>`` : Según el número de encabezado que le demos, tendrá mas prioridad o mayor tamaño que los demás.
+- ``<p> </p>`` : Con estas etiquetas HTML puedes indicar dónde empieza y termina cada párrafo de texto.
+- ``<strong> </strong>`` : Para poner en negrita las palabras dentro de la etiqueta. ``<strong> Palabara X </strong>`` : <strong>Palabra X </strong>.
+- ``<em></em>`` : Para escribir en cursiva las palabras dentro de la etiqueta. ``<em> Palabra Y</em>`` : <em>Palabra Y</em>.
+- ``<u></u>`` : Para escribir en cursiva las palabras dentro de la etiqueta. ``<u> Palabra Z</u>`` : <u>Palabra Z</u>.
+- ``<br>`` : Para ejecutar cambios de línea.
+- ``<hr>`` : Para subrayar o delinear entre parrafos con una línea divisoria.
+- ``<ul></ul>`` : Si necesitas agregar una lista que solo tendrá viñetas, es decir, que no tiene que enumerarse.
+- ``<ol></ol>`` : En cambio, si quieres que los elementos de la lista aparezcan enumerados en orden ascendente.
+- ``<li></li>`` : En contexto con el ejemplo anterior, cada uno de los elementos de una lista debe escribirse con una etiqueta especial, no importa si serán numerados o no.
+- ``<a></a>`` : Para agregar hipervínculos que llevan a otros documentos o páginas web que indiquemos.
+- ``<img></img>`` : Para incluir imágenes en tu documento.
+  
+Estas etiquetas pueden dividirse en **Elementos de bloque** : Necesidad de una líena para poder ejecutarse. O por el contrario en **Elementos de línea** que son etiquetas que se pueden ejecutar en una misma línea detras de otro bloque.
+
+##
+
+## - Rutas
+Para poder movernos y saber donde buscar el nuestros archivos multimedia o enlaces tendremos dos opciones : 
+- **Ruta Absoluta** : Para certicificar la ruta a seguir al pie de la letra del archivo a buscar. Útil para trabajo entre servidores o diferentes ubicaciones con menos propenciones a errores de ruta.
+- **Ruta Relativa** : Conexión o ruta que se hace en relación con el archivo actual. Práctico para trabajo local en un mismo dispositivo o proyectos pequeños.
+
+## 
+
+## - Imagenes
+Para insertar imagenes deberemos usar uno de los comandos antes mostrados ``<img> + src`` el cual específica que cargaremos una imagen y con ``src`` de donde procede.
+- ``<img src="Emperador.jpg" width="250" height="350">``
+
+<img src="Emperador.jpg" width="250" height="350">
+
+Como podemos observar además de indicar la fuente de la imagen, podemos modificar párametros de tamaño con las etiquetas ``width`` y ``height``.
+
+##
+
+## - Enlaces
+De igual manera que hemos visto con la imagen, haremos uso de otros comandos para poder enlazar nuestro documento, bien con otra sección del mismo o con una página web externa, tal y como veremos en el siguiente ejemplo:
+
+- ``<a href="https://www.warhammer.com/es-ES/home"> Visita la página del Emperador </a>``
+  
+<a href="https://www.warhammer.com/es-ES/home"> Visita la página del Emperador </a>
+
+##
+
+## - Validador de HTML 
+
+Página web que nos verifica y indica los errores que hemos podidio cometer a la hora de escriir la sintaxis o las nomenlcaturas de nuestro documento **HTML**.
+
+Siguiendo los estándares establecidos por el **World Web Consortium**.
+
+Enlace : <a href="https://validator.w3.org/">Validador HTML</a>
+
+##
+
+## - 
