@@ -5,16 +5,16 @@
 - [MARKDOWN](#markdown)
 - [HTML](#html)
 ## GITHUB
-#### ¿Que és **GITHUB**?
+### - ¿Que és **GITHUB**?
 - Portal creado para alojar el código de las aplicaciones de cualquier desarrollador que usaremos especifícamente para crear nuestros repertorios. Estos los tendremos en la nube o *GitHub* los cuales podremos ir copiando y bajando copias a nuestros dispositivos locales así como a la inversa subir las modificaciones hechas en local hacia la nube gracias al *CMD* o a las herramientas de *GitHub*.
 - Cada modificación de dicho repertorio lo llamaremos **Commit**.
 - Tenemos la posibilidad de alternar en que sean públicos o privados nuestros repertorios.
   - Como puntualización, decir que aunque estén en público nuestros repertorios, siendo estos tomados por su **URL** podrán como mucho copiarlos y modificarlos por su cuenta pero nunca modificar nuestro repertorio.
 
-#### Crear cuenta en GITHUB
+### - Crear cuenta en GITHUB
 -En la página de *GitHub* nos registraremos para permitirnos crear repositorios o colaborar en proyectos ajenos.
-#### Repertorios
-##### ¿Qué es un repertorio?
+### - Repertorios
+#### ¿Qué es un repertorio?
 Es un lugar o archivo donde puedes almacenar el código, los archivos y el historial de revisiones de cada archivo. Los repositorios pueden contar con múltiples colaboradores y pueden ser públicos como privados.
 
  Antes de empezar a trabajar en nuestro dispositivo local, deberemos tener en cuenta una serie de comandos de trabajo en **CMD** cada uno con una función específica: 
@@ -27,14 +27,19 @@ Es un lugar o archivo donde puedes almacenar el código, los archivos y el histo
 
 Ahora si crearemos nuestro repositorio en *GitHub* y nos aseguraremos de copiar la **URL** para poder clonarlo en nuestro sistema.
 - En la pestaña **New** crearemos el repositorio.
+
 ![Foto03](Apuntes004.jpg)
 - Nombraremos el repositorio y lo pondremos en público o privado según preferencia.
+
 ![Foto01](Apuntes001.jpg)
 - Copiaremos el link del repositorio para añadirlo a nuestro dispositivo local.
+
 ![Foto02](Apuntes002.jpg)
 
 - Ahora tendremos que clonarlo en nuestro dispositivo local con el comando:  
+
 ![Foto03](Apuntes003.jpg)
+
 Con esto ya podriamos trabajar en local e ir subiendo **commits** según avancemos en nuetsro proyecto para no perder el avance.
 ## [MARKDOWN](#indice)
 Es un lenguaje de marcado ligero creado por **John Gruber** y **Aaron Swartz** que trata de conseguir la máxima legibilidad y facilidad con la aplicación de formato a un texto empleando una serrie de caracteres de una forma especial.
@@ -130,3 +135,10 @@ Para seleccionar y enseñar una imagen es tan sencillo como descargarla y ubicar
     |Templarios Negros|500|Terra|
     |Ultramarines|1500|Ultramar|
 ## [HTML](#indice)
+### - ¿Qué es HTML?
+**HTML** o **HyerText Markup Lenguage** es el lenguaje de marcas mas importante de internet, siendo este la base de poder visualizar contenido en un navegador web.
+
+Creado por **Tim Berners-Lee**, **HTML** define la estructura y el contenido de los diferentes archivos multimedia mediante **etiquetas**.
+Destacando también por la facilidad que ofrece este lenguaje para ser usado y aprendido, de ahí que se haya estandarizado su uso en un procentaje muy elevado de páginas web.
+
+### - Estructura del código de HTML
