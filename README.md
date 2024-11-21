@@ -5,10 +5,10 @@
 - [HTML](#html)
 ## GITHUB
 ### - ¿Que és **GITHUB**?
-- Portal creado para alojar el código de las aplicaciones de cualquier desarrollador que usaremos especifícamente para crear nuestros repertorios. Estos los tendremos en la nube o *GitHub* los cuales podremos ir copiando y bajando copias a nuestros dispositivos locales así como a la inversa subir las modificaciones hechas en local hacia la nube gracias al *CMD* o a las herramientas de *GitHub*.
-- Cada modificación de dicho repertorio lo llamaremos **Commit**.
-- Tenemos la posibilidad de alternar en que sean públicos o privados nuestros repertorios.
-  - Como puntualización, decir que aunque estén en público nuestros repertorios, siendo estos tomados por su **URL** podrán como mucho copiarlos y modificarlos por su cuenta pero nunca modificar nuestro repertorio.
+- Portal creado para alojar el código de las aplicaciones de cualquier desarrollador que usaremos especifícamente para crear nuestros Repositorios. Estos los tendremos en la nube o *GitHub* los cuales podremos ir copiando y bajando copias a nuestros dispositivos locales así como a la inversa subir las modificaciones hechas en local hacia la nube gracias al *CMD* o a las herramientas de *GitHub*.
+- Cada modificación de dicho Repositorio lo llamaremos **Commit**.
+- Tenemos la posibilidad de alternar en que sean públicos o privados nuestros Repositorios.
+  - Como puntualización, decir que aunque estén en público nuestros Repositorios, siendo estos tomados por su **URL** podrán como mucho copiarlos y modificarlos por su cuenta pero nunca modificar nuestro Repositorio.
 
 ##
 
@@ -17,8 +17,8 @@
 
 ##
 
-### - Repertorios
-#### ¿Qué es un repertorio?
+### - Repositorios
+#### ¿Qué es un Repositorio?
 Es un lugar o archivo donde puedes almacenar el código, los archivos y el historial de revisiones de cada archivo. Los repositorios pueden contar con múltiples colaboradores y pueden ser públicos como privados.
 
  Antes de empezar a trabajar en nuestro dispositivo local, deberemos tener en cuenta una serie de comandos de trabajo en **CMD** cada uno con una función específica: 
