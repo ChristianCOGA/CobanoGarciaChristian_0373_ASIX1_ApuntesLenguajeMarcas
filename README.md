@@ -331,3 +331,24 @@ Para terminar esta sección de formularios, hablaremos de la etiqueta ``<button>
 ```
 Dando la línea de código mostrada el siguiente resultado de interacción.
 ![Foto08](./Imagenes/Apuntes008.jpg)
+
+## Tablas
+
+Todo dentro de un formato ``<table></table>`` , este tendrá dos atributos a rellenar o definir : ``border`` y ``width``. Ojo de poner ``width = 100%``.
+
+Filas serán llamadas  = **row**
+Las columnas serán llamadas  = **col**
+
+Una tabala puede dos partes, una primera parte llamada encabezado **Heater** : ``<thead></thead>`` y una segunda parte llamada pie o **Footer** acabando con un cierre o pie de página **Footer**.
+
+``<tr> </tr>`` : Define una fila en la parte de la tabla. El atributo ``align`` junto al ``<tr>`` permite alinearlo donde le indiquemos.
+``<td> </td>`` : Definimos las celdas de una fila.
+``<th> </th>`` : Define a nivel semántico que estas celdas pertenecen a un encabezado, diferenciandolas de otras celdas. // Esto sirve también para el encabeado de pie o **Footer**.
+
+``bgcolor`` : Para cambiar el color de fondo del elemento seleccionado. Definidos por su código hexadecimal RGB *(Red/Green/Blue)* valores que oscilan entre 0 - 255, **HTML** de por si ya detecta los colores básicos,
+
+``colspan`` : Permtie cambiar los párametros de la celda de manerea horizontal, para permitirle ocupar dos celdas o las que dictemos en vez de una.
+
+``rowspan`` : Permite cambiar los párametros de la celda de manera vertical, para permitirle ocupar dos celdas o las que dictemos en vez de una.
+
+Para ambos atributos debemos eliminar la celda que vamos a ocupar de más.
