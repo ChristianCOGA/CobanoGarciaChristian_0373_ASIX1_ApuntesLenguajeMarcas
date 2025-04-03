@@ -4,6 +4,9 @@
 - [MARKDOWN](#markdown)
 - [HTML](#html)
 - [CSS](#css)
+- [FLEXBOX](#flexbox)
+- [RESPONSIVE](#responsive)
+- [XML](#xml)
 ## GITHUB
 ### - ¿Que és **GITHUB**?
 - Portal creado para alojar el código de las aplicaciones de cualquier desarrollador que usaremos especifícamente para crear nuestros Repositorios. Estos los tendremos en la nube o *GitHub* los cuales podremos ir copiando y bajando copias a nuestros dispositivos locales así como a la inversa subir las modificaciones hechas en local hacia la nube gracias al *CMD* o a las herramientas de *GitHub*.
@@ -427,7 +430,7 @@ Si hay varios estilos aplicados al mismo elemento la prioridad se organiza de ta
 -   Excepcion de ``!important`` que sobrescribe todo.
 
 
-### Sintaxis básica
+## Sintaxis básica
 
 **Una regla CSS está compuesta por:**
 
@@ -515,4 +518,214 @@ Este selector se aplica a todos los elementos con la misma clase. Como por ejemp
 }
 ```
 
-### Selectores Avanzados de CSS
+## Selectores Avanzados de CSS
+
+**Selector Universal**
+
+Permite seleccionar todos los elementos del documento **HTML.** Se usa con ``*`` y aplica la misma regla a todos los elementos:
+```
+* 
+{
+    border: 1px solid #000000;
+}
+```
+Este ejemplo aplica un borde negro de 1px a todos los elementos del **HTML.**
+
+**Selectores de Atributos**
+
+Permiten seleccionar elementos en función de los atributos que contienen, por ejemplo:
+```
+img[alt] 
+{
+    border: 1px solid #000000;
+}
+```
+Selecciona todas las imágenes que tienen el atributo ``alt``.
+
+**Selectores de Hijos**
+
+Sirven para seleccionar elementos hijos directos de un contenedor específico:
+```
+h3 > strong 
+{
+    color: blue;
+}
+```
+Este código afectaría solo a los elementos ``<strong>`` hijos directos de un ``<h3>``.
+
+
+**Selectores de Descendientes**
+
+Seleccionan cualquier descendiente sin importar cuántos niveles haya entre ellos:
+```
+div em 
+{
+    color: blue;
+}
+```
+Aplica el estilo a todos los ``<em>`` que estén dentro de ``<div>``, incluso si están anidados dentro de otros elementos.
+
+**Selectores de Hermanos Adyacentes**
+
+Seleccionan un elemento que esté inmediatamente después de otro (hermanos):
+```
+h1 + h2 
+{
+    margin-top: -5mm;
+}
+```
+Solo afecta al primer ``<h2>`` que sigue a un ``<h1>`` directamente, ignorando los demás.
+
+**Pseudoclases**
+
+Son palabras clave que se añaden a los selectores para definir un estado especial, daremos el ejemplo de ``hover``:
+```
+a:hover 
+{
+    color: red;
+}
+```
+Cuando el cursor pasa sobre un enlace, cambia a rojo en este caso.
+
+Aplicando ``first-child`` en este caso:
+```
+p:first-child 
+{
+    font-weight: bold;
+}
+```
+Selecciona el primer ``<p>`` hijo de su padre y lo pone en negrita.
+
+**Pseudoelementos**
+
+Permiten aplicar estilos a partes específicas de un elemento:
+```
+p::first-letter 
+{
+    font-size: 200%;
+    color: green;
+}
+```
+Esto agranda la primera letra del primer párrafo.
+
+Otro ejemplo:
+```
+p::before 
+{
+    content: "→ ";
+    color: blue;
+}
+```
+Añade una flecha antes de cada párrafo.
+
+## [FLEXBOX](#flexbox)
+
+## Introducción
+**Flexbox** (o **Flexible Box Layout**) permite diseñar elementos adaptables y alineados dinámicamente. Es ideal para estructuras modernas y diseños responsivos.
+
+Antes se usaba los elementos de **CSS** ``float`` o ``inline-block``, pero **Flex** simplifica mucho el diseño.
+
+**Conceptos clave**
+
+- **Contenedor:** Elemento padre con ``display: flex;``.
+- **Ítems:** Hijos directos del contenedor.
+- **Eje principal:** Dirección base del layout (por defecto es horizontal).
+- **Eje secundario:** Perpendicular al principal (vertical si el principal es horizontal).
+
+**Propiedades del contenedor**
+
+Como ejemplo tendríamos características del contenedor como las siguientes:
+
+![Foto09](./Imagenes/Apuntes009.jpg)
+
+**Propiedades de los Ítems**
+
+El compendio siguiente reune unos ejemplos de uso de las propiedas y caractreísticas de los ítems:
+
+![Foto10](./Imagenes/Apuntes010.jpg)
+
+## [RESPONSIVE](#responsive)
+
+## Introducción
+
+**Responsive Design** es una técnica de diseño web que permite que una página se adapte automáticamente a diferentes tamaños de pantalla y dispositivos como computadoras, tabletas o móviles.
+
+
+**Características principales**
+
+-   **Flexible y adaptable:** Los elementos (texto, imágenes, menús) se ajustan automáticamente al tamaño del dispositivo.
+
+-   **Media queries:** Se aplican estilos según ancho, alto u otras propiedades del dispositivo.
+
+-   **Rejillas fluidas:** Uso de porcentajes en vez de valores fijos.
+
+-   **Imágenes y fuentes escalables:** Para mantener legibilidad y proporción en diferentes tamaños.
+
+## ¿Qué son las Media Queries?
+
+**Media Queries** permiten aplicar estilos según características del dispositivo o ventana del navegador.
+
+Permiten adaptar contenido automáticamente a distintos tamaños como ordenadores, tablets o móviles.
+
+**Funcionamiento:**
+
+Detectan características del dispositivo (ancho, orientación, etc.) y aplican estilos condicionales si se cumple la condición especificada.
+
+**Ejemplo práctico de Media Queries**
+
+Cambiaremos el fondo del sitio cambie según el tamaño de pantalla:
+
+-   En pantallas grandes: ``fondo azul``.
+-   En tabletas: ``fondo verde``.
+-   En móviles: ``fondo amarillo``.
+
+Archivo **CSS**:
+
+-   **General**
+```
+body 
+{
+  background-color: blue;
+  color: white;
+}
+```
+-   **Tablet** : Aquí podemos observar que aplicaremos ``@media`` que será el parámetro que modificará los atributos o características del **CSS**.
+```
+@media (max-width: 768px) 
+{
+  body 
+  {
+    background-color: green;
+  }
+}
+```
+-   **Móvil**: Nuevamente vemos como se modificaran los ``px`` mediante el ``@media`` al aplicarse al dispositivo móvil.
+```
+@media (max-width: 480px) 
+{
+  body 
+  {
+    background-color: yellow;
+  }
+}
+```
+
+## [XML](#xml)
+
+## Introducción
+**¿Qué es XML?**
+
+**XML (eXtensible Markup Language)** es un lenguaje de marcas diseñado para almacenar y transportar datos, no para mostrarlos (como lo haría **HTML**).
+
+Es legible tanto para humanos como para máquinas, y se usa mucho en configuración, intercambio de datos entre aplicaciones y almacenamiento estructurado.
+
+No tiene etiquetas predefinidas como HTML, tú defines tus propias etiquetas.
+
+De estructura es jerárquica y reglas propias estrictas.
+
+**Características principales**
+
+-   **Extensible:** puedes crear tus propias etiquetas.
+-   **Estructurado:** basado en una jerarquía de nodos (padres e hijos).
+-   **Legible:** tanto para humanos como para máquinas.
+-   **Compatible:** se puede usar con muchos lenguajes (**Java, Python, PHP**...).
