@@ -3,6 +3,7 @@
 - [GITHUB](#github)
 - [MARKDOWN](#markdown)
 - [HTML](#html)
+- [CSS](#css)
 ## GITHUB
 ### - ¿Que és **GITHUB**?
 - Portal creado para alojar el código de las aplicaciones de cualquier desarrollador que usaremos especifícamente para crear nuestros Repositorios. Estos los tendremos en la nube o *GitHub* los cuales podremos ir copiando y bajando copias a nuestros dispositivos locales así como a la inversa subir las modificaciones hechas en local hacia la nube gracias al *CMD* o a las herramientas de *GitHub*.
@@ -352,3 +353,166 @@ Una tabala puede dos partes, una primera parte llamada encabezado **Heater** : `
 ``rowspan`` : Permite cambiar los párametros de la celda de manera vertical, para permitirle ocupar dos celdas o las que dictemos en vez de una.
 
 Para ambos atributos debemos eliminar la celda que vamos a ocupar de más.
+
+## [CCS](#css)
+
+## Evolución y función
+
+**CSS (Cascading Style Sheets)** surge para separar el contenido de una web (HTML) de su presentación visual.
+
+Antes, **HTML** asumía tanto la estructura como el diseño de las páginas web.
+**CSS** se introduce para evitar esto, permitiendo aplicar estilos sin modificar el contenido.
+
+## Ventajas e inconvenientes
+
+**Ventajas:**
+
+-   Facilita el mantenimiento del código.
+-   Más potente y flexible que las etiquetas de estilo HTML.
+-   Sencillo de aprender.
+-   Permite definir estilos distintos para impresión y pantalla.
+-   Se puede reutilizar desde distintos documentos.
+
+**Inconvenientes:**
+
+-   No todos los navegadores interpretan CSS igual.
+-   Requiere crear hojas de estilo diferentes para algunos navegadores.
+
+## Ubicación del CSS
+
+**Inline (en la misma etiqueta HTML):**
+
+``<p style="text-align:center; color:red">Texto centrado y rojo</p>``
+
+**Interno (en la cabecera del documento):**
+```
+<head>
+    <style>
+        p 
+        {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+```
+**Externo ``styles.css``:**
+
+Primeramente crearemos dos archivos diferentes , siendo uno el **HTML** como **index.html** y otro archivo **CSS** como **style.css**.
+
+**HTML ``index.html``:**
+```
+<head>
+    <link rel="stylesheet" href="estils.css" type="text/css">
+</head>
+```
+
+**CSS ``styles.css``:**
+```
+p 
+{
+    text-align: center;
+    color: red;
+}
+```
+## Prioridad del CSS
+
+Si hay varios estilos aplicados al mismo elemento la prioridad se organiza de tal manera que el estilo aplicado más cercano al elemento al que hace efecto es el que tiene prioridad por encima de los demas excepto por una excepción:
+
+-   Inline (más prioridad).
+-   Interno.
+-   Externo.
+-   El orden dentro del mismo CSS también importa (lo último sobrescribe lo anterior).
+-   Por Herencia que seria el de menos prioridad.
+-   Excepcion de ``!important`` que sobrescribe todo.
+
+
+### Sintaxis básica
+
+**Una regla CSS está compuesta por:**
+
+-   **Selector:** A qué elemento se aplica, ``p``.
+
+-   **Declaraciones:** Propiedad + valor, ``font-size_ 10px;``.
+
+    Por ejemplo:
+```
+p 
+{
+    font-size: 10px;
+    background-color: gray;
+}
+```
+-   **Comentarios**: Se usan para añadir notas que el navegador ignora.
+
+``/* Esto es un comentario */``
+
+-   **Agrupar selectores:** En lugar de escribir reglas duplicadas, las agrupamos en única declaración:
+```
+h1, p 
+{
+    color: red;
+}
+```
+**Tipos de selectores**
+
+-   **Básicos:**
+
+    - Selector de elementos ``p``, ``h1``.
+    - Selector de ID ``#id``.
+    - Selector de clase ``.clase``.
+
+-   **Avanzados:**
+
+    - Selector universal ``*``.
+    - Selectores de atributos ``[type="text"]``.
+    - Selectores de hijos ``>``.
+    - Selectores de descendientes ``espacio``.
+    - Hermanos adyacentes ``+``.
+    - Pseudoclases ``:hover``.
+    - Pseudoelementos ``::before``.
+
+**Selector de elementos (selector de tipo):**
+
+Este selector aplica un estilo a todos los elementos del tipo indicado. Como por ejemplo:
+
+``Afecta a todos los enlaces <a>``
+```
+a 
+{
+    color: red;
+}
+```
+
+**Selector de ID**
+
+Este selector afecta al elemento que tenga un id específico. Solo puede haber un elemento por ID para cada elemento, dado que es un elemento identificador único. Como por ejemplo:
+
+``<p id="example">Texto con ID</p>``
+```
+#example 
+{
+    property: value;
+    property2: value2;
+}
+```
+
+**Selector de clase**
+
+Este selector se aplica a todos los elementos con la misma clase. Como por ejemplo:
+
+``<p class="example">Texto</p>``
+
+``<li class="example">Elemento</li>``
+
+``<div class="example">Contenedor</div>``
+
+```
+.example 
+{
+    property: value;
+    property2: value2;
+}
+```
+
+### Selectores Avanzados de CSS
