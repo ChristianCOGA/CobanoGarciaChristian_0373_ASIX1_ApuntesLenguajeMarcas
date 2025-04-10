@@ -357,7 +357,7 @@ Una tabala puede dos partes, una primera parte llamada encabezado **Heater** : `
 
 Para ambos atributos debemos eliminar la celda que vamos a ocupar de más.
 
-## [CCS](#css)
+## [CSS](#css)
 
 ## Evolución y función
 
